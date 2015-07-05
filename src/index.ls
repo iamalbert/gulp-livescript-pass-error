@@ -62,7 +62,7 @@ class VinylLSConverter
 
     catch error
       error.message += "\nat " + clonedFile.path
-      clonedFile = null
+      clonedFile = new Buffer error.message
     [error, clonedFile]
 
   _convertFilepath: (clonedFile) ->
